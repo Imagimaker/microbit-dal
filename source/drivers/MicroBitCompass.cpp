@@ -302,7 +302,8 @@ void MicroBitCompass::clearCalibration()
  */
 int MicroBitCompass::configure()
 {
-    return MICROBIT_NOT_SUPPORTED;
+    //return MICROBIT_NOT_SUPPORTED;
+    return MICROBIT_OK
 }
 
 /**
