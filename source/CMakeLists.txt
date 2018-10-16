@@ -26,7 +26,7 @@ set(YOTTA_AUTO_MICROBIT-DAL_CPP_FILES
     "drivers/DynamicPwm.cpp"
     "drivers/MicroBitAccelerometer.cpp"
     "drivers/MicroBitButton.cpp"
-    "drivers/MicroBitCompass.cpp"
+    /*"drivers/MicroBitCompass.cpp"*/
     "drivers/MicroBitCompassCalibrator.cpp"
     "drivers/MicroBitDisplay.cpp"
     "drivers/MicroBitI2C.cpp"
