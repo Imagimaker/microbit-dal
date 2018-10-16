@@ -137,8 +137,8 @@ MicroBitCompass& MicroBitCompass::autoDetect(MicroBitI2C &i2c)
 
         else
         {  
-            microbit_panic(MICROBIT_HARDWARE_UNAVAILABLE_ACC);
-            //microbit_panic(MICROBIT_HARDWARE_UNAVAILABLE_MAG);
+            microbit_panic(MICROBIT_HARDWARE_UNAVAILABLE_ACC);//050
+            //microbit_panic(MICROBIT_HARDWARE_UNAVAILABLE_MAG);//051
             
         }
     }
