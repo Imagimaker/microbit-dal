@@ -98,7 +98,7 @@ void MicroBitCompass::init(uint16_t id)
  * @param id the unique EventModel id of this component. Defaults to: MICROBIT_ID_ACCELEROMETER
  *
  */
-MicroBitCompass& MicroBitCompass::autoDetect(MicroBitI2C &i2c)
+/*MicroBitCompass& MicroBitCompass::autoDetect(MicroBitI2C &i2c)
 {
     
         
@@ -137,8 +137,8 @@ MicroBitCompass& MicroBitCompass::autoDetect(MicroBitI2C &i2c)
 
         else
         {  
-            //microbit_panic(MICROBIT_HARDWARE_UNAVAILABLE_MAG);
-            microbit_panic(MICROBIT_OK);
+            microbit_panic(MICROBIT_HARDWARE_UNAVAILABLE_MAG);
+            //microbit_panic(MICROBIT_OK);
         }
     }
 
@@ -149,7 +149,7 @@ MicroBitCompass& MicroBitCompass::autoDetect(MicroBitI2C &i2c)
     
     return *MicroBitCompass::detectedCompass; 
    
-}
+}*/
 
 /**
  * Gets the current heading of the device, relative to magnetic north.
