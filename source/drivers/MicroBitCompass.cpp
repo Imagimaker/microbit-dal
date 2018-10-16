@@ -100,7 +100,7 @@ void MicroBitCompass::init(uint16_t id)
  */
 MicroBitCompass& MicroBitCompass::autoDetect(MicroBitI2C &i2c)
 {
-    return MICROBIT_OK；//直接返回检测到磁力计
+    
         
         
     if (MicroBitCompass::detectedCompass == NULL)
@@ -510,4 +510,4 @@ MicroBitCompass::~MicroBitCompass()
 {
 }
 
-MicroBitCompass* MicroBitCompass::detectedCompass= NULL;
+//MicroBitCompass* MicroBitCompass::detectedCompass= NULL;
