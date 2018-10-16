@@ -135,6 +135,7 @@ MicroBitCompass& MicroBitCompass::autoDetect(MicroBitI2C &i2c)
         else
         {  
             microbit_panic(MICROBIT_HARDWARE_UNAVAILABLE_MAG);
+            return MICROBIT_OK；//直接返回检测到磁力计
         }
     }
 
@@ -143,8 +144,8 @@ MicroBitCompass& MicroBitCompass::autoDetect(MicroBitI2C &i2c)
         MicroBitCompass::detectedCompass->setAccelerometer(*MicroBitAccelerometer::detectedAccelerometer);
     
     
-    return *MicroBitCompass::detectedCompass; 
-    //return fxos；//直接返回检测到磁力计
+    //return *MicroBitCompass::detectedCompass; 
+   
 }
 
 /**
