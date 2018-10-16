@@ -76,18 +76,18 @@ MicroBitCompass::MicroBitCompass(MicroBitAccelerometer &accel, CoordinateSpace &
 void MicroBitCompass::init(uint16_t id)
 {
     // Store our identifiers.
-    //this->id = id;
-    //this->status = 0;
+    this->id = id;
+    this->status = 0;
 
     // Set a default rate of 10Hz.
-    //this->samplePeriod = 100;
-    //this->configure();
+    this->samplePeriod = 100;
+    this->configure();
 
     // Assume that we have no calibration information.
-    //status &= ~MICROBIT_COMPASS_STATUS_CALIBRATED;
+    status &= ~MICROBIT_COMPASS_STATUS_CALIBRATED;
 
     // Indicate that we're up and running.
-    //status |= MICROBIT_COMPONENT_RUNNING;
+    status |= MICROBIT_COMPONENT_RUNNING;
 }
 
 /**
