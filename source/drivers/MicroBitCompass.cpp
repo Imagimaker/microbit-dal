@@ -133,7 +133,7 @@ MicroBitCompass& MicroBitCompass::autoDetect(MicroBitI2C &i2c)
         //}
 
         else
-        {
+        {  
             microbit_panic(MICROBIT_HARDWARE_UNAVAILABLE_MAG);
         }
     }
@@ -141,8 +141,9 @@ MicroBitCompass& MicroBitCompass::autoDetect(MicroBitI2C &i2c)
     // If an accelerometer has been discovered, enable tilt compensation on the e-compass.
     if (MicroBitAccelerometer::detectedAccelerometer)
         MicroBitCompass::detectedCompass->setAccelerometer(*MicroBitAccelerometer::detectedAccelerometer);
-
-    return *MicroBitCompass::detectedCompass;
+    
+    return MICROBIT_OK; //不检测磁力计
+    //return *MicroBitCompass::detectedCompass; //检测磁力计
 }
 
 /**
