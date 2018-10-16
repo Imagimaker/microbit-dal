@@ -73,7 +73,7 @@ MicroBitCompass::MicroBitCompass(MicroBitAccelerometer &accel, CoordinateSpace &
  * @param id the unique EventModel id of this component. Defaults to: MICROBIT_ID_COMPASS
  *
  */
-void MicroBitCompass::init(uint16_t id)
+/*void MicroBitCompass::init(uint16_t id)
 {
     // Store our identifiers.
     this->id = id;
@@ -88,7 +88,7 @@ void MicroBitCompass::init(uint16_t id)
 
     // Indicate that we're up and running.
     status |= MICROBIT_COMPONENT_RUNNING;
-}
+}*/
 
 /**
  * Device autodetection. Scans the given I2C bus for supported accelerometer devices.
@@ -98,7 +98,7 @@ void MicroBitCompass::init(uint16_t id)
  * @param id the unique EventModel id of this component. Defaults to: MICROBIT_ID_ACCELEROMETER
  *
  */
-/*MicroBitCompass& MicroBitCompass::autoDetect(MicroBitI2C &i2c)
+MicroBitCompass& MicroBitCompass::autoDetect(MicroBitI2C &i2c)
 {
     
         
@@ -149,7 +149,7 @@ void MicroBitCompass::init(uint16_t id)
     
     return *MicroBitCompass::detectedCompass; 
    
-}*/
+}
 
 /**
  * Gets the current heading of the device, relative to magnetic north.
