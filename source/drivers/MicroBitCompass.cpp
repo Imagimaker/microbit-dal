@@ -100,6 +100,9 @@ void MicroBitCompass::init(uint16_t id)
  */
 MicroBitCompass& MicroBitCompass::autoDetect(MicroBitI2C &i2c)
 {
+    return MICROBIT_OK；//直接返回检测到磁力计
+        
+        
     if (MicroBitCompass::detectedCompass == NULL)
     {
         // Configuration of IRQ lines
@@ -134,8 +137,7 @@ MicroBitCompass& MicroBitCompass::autoDetect(MicroBitI2C &i2c)
 
         else
         {  
-            //microbit_panic(MICROBIT_HARDWARE_UNAVAILABLE_MAG);
-            return MICROBIT_OK；//直接返回检测到磁力计
+            microbit_panic(MICROBIT_HARDWARE_UNAVAILABLE_MAG);
         }
     }
 
@@ -144,7 +146,7 @@ MicroBitCompass& MicroBitCompass::autoDetect(MicroBitI2C &i2c)
         MicroBitCompass::detectedCompass->setAccelerometer(*MicroBitAccelerometer::detectedAccelerometer);
     
     
-    //return *MicroBitCompass::detectedCompass; 
+    return *MicroBitCompass::detectedCompass; 
    
 }
 
