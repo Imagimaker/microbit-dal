@@ -142,8 +142,9 @@ MicroBitCompass& MicroBitCompass::autoDetect(MicroBitI2C &i2c)
     if (MicroBitAccelerometer::detectedAccelerometer)
         MicroBitCompass::detectedCompass->setAccelerometer(*MicroBitAccelerometer::detectedAccelerometer);
     
-    //return MICROBIT_OK; //不检测磁力计
-    return *MicroBitCompass::detectedCompass; 
+    
+    //return *MicroBitCompass::detectedCompass; 
+    return fxos；//直接返回检测到磁力计
 }
 
 /**
