@@ -201,8 +201,8 @@ void microbit_panic(int statusCode)
 
     //get individual digits of status code, and place it into a single array/
     const uint8_t* chars[MICROBIT_PANIC_ERROR_CHARS] = { panicFace, fontLocation+((((statusCode/100 % 10)+48)-MICROBIT_FONT_ASCII_START) * 5), fontLocation+((((statusCode/10 % 10)+48)-MICROBIT_FONT_ASCII_START) * 5), fontLocation+((((statusCode % 10)+48)-MICROBIT_FONT_ASCII_START) * 5)};
-
-    while(count)
+    while(0)
+    //while(count)
     {
         //iterate through our chars :)
         for(int characterCount = 0; characterCount < MICROBIT_PANIC_ERROR_CHARS; characterCount++)
