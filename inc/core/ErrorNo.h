@@ -85,6 +85,6 @@ enum PanicCode{
 
     // A requested hardware peripheral could not be found,
     MICROBIT_HARDWARE_UNAVAILABLE_ACC = 50,
-    MICROBIT_HARDWARE_UNAVAILABLE_MAG = 51,
+    MICROBIT_HARDWARE_UNAVAILABLE_MAG = 55,
 };
 #endif
